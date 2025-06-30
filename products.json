@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "롤렉스 데이트저스트",
+    "brand": "ROLEX",
+    "price": 16500000,
+    "image": "images/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "샤넬 시퀸 쇼핑백 AS4856",
+    "brand": "CHANEL",
+    "price": 7950000,
+    "image": "images/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "구찌 GG 마몽 벨트백 (699757)",
+    "brand": "GUCCI",
+    "price": 2800000,
+    "image": "images/3.jpg"
+  }
+]
