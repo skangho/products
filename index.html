@@ -94,9 +94,14 @@
       header h1 {
         font-size: 22px;
       }
+
       .product-info {
         padding: 12px 15px;
       }
+
+	  .product-grid {
+		grid-template-columns: repeat(2, 1fr);
+	  }
     }
   </style>
 </head>
@@ -109,10 +114,11 @@
     <div class="product-grid" id="product-list"></div>
   </main>
 
+  <!-- <script src="products.js"></script> -->
   <script>
     const container = document.getElementById('product-list');
-
-    fetch('./products.json')
+    
+    fetch('products.json')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -133,11 +139,23 @@
           `;
           container.appendChild(item);
         });
-      })
-      .catch(error => {
-        container.innerHTML = '<p>상품 정보를 불러오지 못했습니다.</p>';
-        console.error('Error loading products:', error);
       });
+      
+    /*
+    products.forEach(p => {
+      const item = document.createElement('div');
+      item.className = 'product';
+      item.innerHTML = `
+        <img src="${p.image}" alt="${p.name}" />
+        <div class="product-info">
+          <div class="brand">${p.brand}</div>
+          <div class="name">${p.name}</div>
+          <div class="price">${p.price.toLocaleString()} 원</div>
+        </div>
+      `;
+      container.appendChild(item);
+    });
+    */
   </script>
 </body>
 </html>
